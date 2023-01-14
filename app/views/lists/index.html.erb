@@ -1,9 +1,14 @@
 <h1>Books</h1>
-<p>Find me in app/views/lists/index.html.erb</p>
+
+<!-- title -->
+<p>Title</p>
+
+<!-- Body -->
+<p>Body</p>
 
 <!-- 投稿box -->
 <h2>New book</h2>
-<%= form_with model: @lists,url: '/show',method: :put do |f| %>
+<%= form_with model: @book,url: '/lists',method: :post do |f| %>
  <h4>title</h4>
  <%= f.text_field :本のタイトル %>
 
