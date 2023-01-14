@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   # resorces :lists
+  get '/top' => 'homes#top'
   get 'lists/index'
   post 'lists' => 'lists#create'
   get 'lists/:id' => 'lists#show', as: 'book'
-  get 'lists/edit'
-  get '/top' => 'homes#top'
+  get 'lists/:id/edit' => 'lists#edit', as: 'edit_book'
+  patch 'lists/:id' => 'lists#update', as: 'update_book'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
