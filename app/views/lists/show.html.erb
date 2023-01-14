@@ -4,4 +4,7 @@
 <h2>body</h2>
 <p><%= @book.body %></p>
 
-<%= link_to "Edit",edit_book_path(@book.id) %>
+<%= link_to "Edit",edit_book_path(book.id) %>
+<%= link_to "Dlete",destroy_book_path(book.id),method: :delete, "date-confirm" => "Are you sure?" %>
+
+<% end %>
