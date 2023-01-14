@@ -4,7 +4,7 @@ class ListsController < ApplicationController
   end
 
   def index
-    @lists = List.all
+    @lists = Book.all
   end
 
   def show
