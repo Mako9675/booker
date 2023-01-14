@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # resorces :lists
-  get 'lists/index'
+  get 'lists' => 'lists#index'
   post 'lists' => 'lists#create'
   get 'lists/show'
   get 'lists/edit'
