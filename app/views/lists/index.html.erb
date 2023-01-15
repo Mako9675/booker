@@ -16,7 +16,7 @@
 </span>
 
 <%= link_to "Edit",edit_book_path(book.id),method: :get %>
-<%= link_to "Dlete",destroy_book_path(book.id),method: :delete, data: { confirm: "Are you sure？" } %>
+<%= link_to "Dlete",book_path(@book.id),method: :delete, data: { confirm: "Are you sure？" } %>
 
 
 <% end %>
