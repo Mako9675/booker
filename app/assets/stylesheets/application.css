@@ -21,3 +21,18 @@
   box-sizing: border-box;
 }
 
+head {
+  display: none;
+}
+
+body {
+  color: black;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+p {
+  margin: 30px;
+}
+
