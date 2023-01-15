@@ -10,6 +10,7 @@ class ListsController < ApplicationController
     if @book.save
       redirect_to book_path(@book.id)
     else
+      @books = Book.all
       render :index
     end
 
@@ -29,6 +30,7 @@ class ListsController < ApplicationController
     if @book.update
       redirect_to book_path(@book.id)
     else
+      @books = Book.all
       render :index
     end
     
