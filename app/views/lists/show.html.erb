@@ -2,7 +2,7 @@
      <p id="notice">
        <%= flash[:notice] %>
      </p>
-     
+
 <% end %>
 
 <h2>title</h2>
@@ -12,4 +12,4 @@
 <p><%= @book.body %></p>
 
 <%= link_to "Edit",edit_book_path(@book.id) %>
-<%= link_to "Back",:back %>
+<%= link_to "Back",lists_index_path ,method: :get%>
