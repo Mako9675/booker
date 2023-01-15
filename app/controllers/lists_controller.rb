@@ -18,11 +18,11 @@ class ListsController < ApplicationController
   end
 
   def show
-    @book = Book.find_by(id: params[:id])
+    @book = Book.find(params[:id])
   end
 
   def edit
-    @book = Book.find_by(id: params[:id])
+    @book = Book.find(params[:id])
   end
 
   def update
@@ -38,9 +38,9 @@ class ListsController < ApplicationController
   end
 
   def destroy
-    book = Book.find_by(id: params[:id])
-    book.destroy(book_params)
-    redirect_to '/index'
+    book = Book.find(params[:id])
+    book.destroy
+    redirect_to '/lists'
     flash[:notice] = "Book was successfully destroyed."
   end
 

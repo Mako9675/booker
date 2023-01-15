@@ -36,3 +36,26 @@ p {
   margin: 30px;
 }
 
+h1 {
+  margin: 20px 0px;
+}
+
+.index-head {
+  display: flex;
+  justify-content: space-around;
+}
+
+.index-title {
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 5px;
+
+}
+
+.index-text {
+  text-align: center;
+  display: inline-block;
+  overflow-wrap: normal;
+
+}
