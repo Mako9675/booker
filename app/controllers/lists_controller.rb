@@ -9,6 +9,7 @@ class ListsController < ApplicationController
     book = Book.new(book_params)
     book.save
     redirect_to book_path(book.id)
+    flash[:notice] = "Book was successfully created." 
   end
 
   def show
@@ -23,12 +24,14 @@ class ListsController < ApplicationController
     book = Book.find_by(id: params[:id])
     book.update(book_params)
     redirect_to book_path(book.id)
+    flash[:notice] = "Book was successfully updated." 
   end
 
   def destroy
     book = Book.find_by(id: params[:id])
     book.destroy
     redirect_to '/lists/index'
+    flash[:notice] = "Book was successfully destroyed." 
   end
 
 private
