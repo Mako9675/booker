@@ -2,15 +2,20 @@
 
 <%= form_with model: @book,url: list_path(@book.id),method: :patch do |f| %>
 
-<p>Title</p>
- <%= f.text_field :title %>
+<div class="new">
+  <p class="new-text">Title</p>
+   <%= f.text_field :title %>
+</div>
 
-<p>Body</p>
- <%= f.text_area :body %>
-
- <%= f.submit 'Update Book' %>
-
+<div class="new">
+  <p class="new-text">Body</p>
+   <%= f.text_area :body %>
+</div>
+ 
+ <div class="update"><%= f.submit 'Update Book' %></div>
+<br>
  <%= link_to "Show", list_path(@book.id) %>
+ |
  <%= link_to "Back",lists_path ,method: :get %>
 
  <% end %>
