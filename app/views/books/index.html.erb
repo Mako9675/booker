@@ -20,9 +20,9 @@
     <td><%= book.body %></td>
 
     <td>
-      <%= link_to "Show", list_path(book.id) %>
-      <%= link_to "Edit",edit_list_path(book.id),method: :get %>
-      <%= link_to "Destroy",list_path(book.id),method: :delete, data: { confirm: "Are you sure？" } %>
+      <%= link_to "Show", book_path(book.id) %>
+      <%= link_to "Edit",edit_book_path(book.id),method: :get %>
+      <%= link_to "Destroy",book_path(book.id),method: :delete, data: { confirm: "Are you sure？" } %>
     </td>
   </tr>
     <% end %>
@@ -31,7 +31,7 @@
 
 <!-- 投稿box -->
   <h2>New book</h2>
-  <%= form_with model: @books,url: '/lists',method: :post do |f| %>
+  <%= form_with model: @books,url: '/books',method: :post do |f| %>
 
 
   <% if @book.errors.any? %>

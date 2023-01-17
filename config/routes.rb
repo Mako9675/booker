@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :lists
+  resources :books
   get '/top' => 'homes#top'
   # get 'lists/index'
   # post 'lists' => 'lists#create'
