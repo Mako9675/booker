@@ -6,35 +6,32 @@
 <% end %>
 
 <h1>Books</h1>
-<% @books.each do |book| %>
 <!-- 一覧表 -->
-<div class="index-head">
-  <span class="index-title">
-    Title
-  </span>
-  <span class="index-title">
-    Body
-  </span>
-  <span class="index-title"></span>
-</div>
-<div class="index-body">
-  <span class="index-text">
-    <%= book.title %>
-  </span>
-  <span class="index-text">
-    <%= book.body %>
-  </span>
+<table class="head">
+  <tr class="head-text">
+    <th>Title</th>
+    <th>Body</th>
+    <th>     </th>
+  </tr>
+</table>
+
+<% @books.each do |book| %>
+<table class="body">
+  <tr class="body-text">
+    <td><%= book.title %></td>
+    <td><%= book.body %></td>
 
     <%= link_to "Show", list_path(book.id) %>
     <%= link_to "Edit",edit_list_path(book.id),method: :get %>
     <%= link_to "Dlete",list_path(book.id),method: :delete, data: { confirm: "Are you sure？" } %>
 
     <% end %>
+  </tr>
 </div>
+    
 
 
 <!-- 投稿box -->
-<div class="new">
   <h2>New book</h2>
   <%= form_with model: @books,url: '/lists',method: :post do |f| %>
 
@@ -46,14 +43,15 @@
       <% end %>
     </ul>
   <% end %>
-
-  <h4>title</h4>
-  <%= f.text_field :title %>
-
-  <h4>body</h4>
-  <%= f.text_area :body %>
+  
+  <div class="new">
+    <p class="new-text">Title</p>
+    <%= f.text_field :title %>
+  </div>
+  <div class="new">
+    <p class="new-text">Body</p>
+    <%= f.text_area :body %>
+  </div>
 
   <%= f.submit 'Create Book' %>
   <% end %>
-
-</div>

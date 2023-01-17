@@ -36,26 +36,39 @@ p {
   margin: 30px;
 }
 
-h1 {
+h1,h2 {
   margin: 20px 0px;
 }
 
-.index-head {
-  display: flex;
-  justify-content: space-around;
+.head {
+  margin-bottom: 5px;
+  width: 80%;
 }
 
-.index-title {
+th {
+  width: 60px;
+  display: table-cell;
+}
+
+.head-text {
   font-weight: bold;
   text-align: center;
-  display: inline-block;
-  margin-bottom: 5px;
-
 }
 
-.index-text {
-  text-align: center;
-  display: inline-block;
-  overflow-wrap: normal;
+.body {
+  margin-bottom: 5px;
+  width: 80%;
+  display: inline-table;
+}
 
+form {
+  display: block;
+}
+
+.new {
+  margin-bottom: 10px;
+}
+
+.new-text {
+  margin: 0px;
 }
